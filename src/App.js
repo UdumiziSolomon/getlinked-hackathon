@@ -1,6 +1,12 @@
 import "./App.css";
-import { Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
+// reactquery
 import { QueryClient, QueryClientProvider } from "react-query";
+
+// imports
+import { Contact, Home, Register } from "./pages";
+import { Header } from "./components";
 
 // new queryClient
 const queryClient = new QueryClient();
@@ -9,18 +15,12 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
+        <Header />
         <Routes>
-          {/* <Route name="Home" /> */}
-          {/* <Route name="Contact" /> */}
-          {/* <Route name="Register" /> */}
+          <Route name="/" element={<Home />} />
+          <Route name="/contact" element={<Contact />} />
+          <Route name="/register" element={<Register />} />
         </Routes>
-
-        <h1 style={{ color: "#fff", fontFamily: "Bold" }}>GET LINKED</h1>
-        <h1 style={{ color: "#fff", fontFamily: "SemiBold" }}>GET LINKED</h1>
-        <h1 style={{ color: "#fff", fontFamily: "Medium" }}>GET LINKED</h1>
-        <h1 style={{ color: "#fff", fontFamily: "Regular" }}>GET LINKED</h1>
-        <h1 style={{ color: "#fff", fontFamily: "Light" }}>GET LINKED</h1>
-        <h1 style={{ color: "#fff", fontFamily: "ExtraLight" }}>GET LINKED</h1>
       </div>
     </QueryClientProvider>
   );
