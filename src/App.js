@@ -17,9 +17,9 @@ const App = () => {
       <div className="App">
         <Header />
         <Routes>
-          <Route name="/" element={<Home />} />
-          <Route name="/contact" element={<Contact />} />
-          <Route name="/register" element={<Register />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </QueryClientProvider>
