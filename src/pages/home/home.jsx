@@ -1,8 +1,15 @@
 import React from "react";
-// import styles from './home.module.css';
+import styles from './home.module.css';
+
+// sections
+import { Timeline } from './sections';  
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div className={styles.container}>
+      <Timeline />
+    </div>
+  )
 };
 
 export default Home;
