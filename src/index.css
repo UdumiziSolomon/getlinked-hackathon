@@ -34,6 +34,16 @@
   src: url('../public/resources/fonts/ExtraLight.otf') format('opentype');
 }
 
+@font-face {
+  font-family: MBold;
+  src: url('../public/resources/fonts/MBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: MRegular;
+  src: url('../public/resources/fonts/MRegular.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
