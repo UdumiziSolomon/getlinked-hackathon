@@ -1,2 +1,13 @@
 .container {
 }
+.topLayer {
+
+}
+.topLayerTopText {
+  font-family: Bold;
+  color: #fff;
+}
+.topLayerSubText {
+  font-family: MRegular;
+  color: #fff;
+}
