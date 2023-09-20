@@ -1,13 +1,20 @@
 .container {
 }
 .topLayer {
-
 }
 .topLayerTopText {
-  font-family: Bold;
+  font-family: SemiBold;
   color: #fff;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 .topLayerSubText {
   font-family: MRegular;
-  color: #fff;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
 }
