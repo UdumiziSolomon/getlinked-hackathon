@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style={{ fontFamily: "Bold" }}>GET LINKED</h1>
+      <h1 style={{ fontFamily: "SemiBold" }}>GET LINKED</h1>
+      <h1 style={{ fontFamily: "Medium" }}>GET LINKED</h1>
+      <h1 style={{ fontFamily: "Regular" }}>GET LINKED</h1>
+      <h1 style={{ fontFamily: "Light" }}>GET LINKED</h1>
+      <h1 style={{ fontFamily: "ExtraLight" }}>GET LINKED</h1>
     </div>
   );
-}
+};
 
 export default App;
