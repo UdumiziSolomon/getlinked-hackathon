@@ -1,0 +1,181 @@
+.container {
+    min-height: 200px;
+    display: grid;
+    grid-template-areas: 
+        "first"
+        "second"
+        "third"
+    ;
+    padding-top: 20px;
+    border-bottom: 1px solid #ffffff2e;
+}
+
+.first {
+    grid-area: first
+}
+
+.first p {
+    color: #FFF;
+    font-family: MBold;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.first p span {
+    display: inline-block;
+    position: relative;
+}
+
+.first p span img {
+    position: absolute;
+    left: 0;
+    bottom: -10px
+}
+
+
+.second {
+    grid-area: second;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 35px;
+}
+
+.title p {
+    color: #FFF;
+    font-family: Bold;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title p span {
+    display: inline-block;
+    position: relative;
+}
+
+.title p span img {
+    width: 18px;
+    height: 26px;
+    position: absolute;
+    left: 5px;
+    top: -15px;
+}
+
+.title div {
+    display: flex;
+    align-items: center;
+}
+
+
+.title div span {
+    color: #D434FE;
+}
+
+.title div img {
+    width: 48px;
+    height: 28.6px;
+}
+
+.desc {
+    color: #FFF;
+    text-align: center;
+    font-family: MRegular;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 166%;
+}
+
+.timer {
+    color: #FFF;
+    font-family: MRegular;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 63.84px;
+}
+
+.timer span {
+    font-size: 14px;
+}
+
+.third {
+    grid-area: third;
+    height: 350px;
+    background-image: url('/public/resources/images/heroImg.png');
+    background-position: 100% 100%;
+}
+
+.third img {
+    display: none;
+}
+
+@media (min-width: 390px) {
+    .container {
+        background-image: url('/public/resources/images/heroBg.png');
+        /* background-position: 10% 10%; */
+        grid-template-areas: 
+        "first first"
+        "second third"
+        ;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+    }
+
+    .first {
+        padding: 0 50px;
+    }
+
+    .first p {
+        text-align: right;
+        font-size: 26px;
+    }
+
+    .first p span img {
+        width: 200px;
+        stroke-width: 5px;
+        bottom: -15px;
+    }
+
+    .second {
+        padding: 40px 0;
+        padding-left: 80px;
+        align-items: flex-start;
+    }
+
+    .title p {
+        font-size: 55px;
+        text-align: start;
+    }
+
+    .title p span img {
+        width: 33px;
+        height: 53px;
+        left: 10px;
+        top: -32px;
+    }
+
+    .title div img {
+        width: 72px;
+        height: 43px;
+    }
+
+    .desc {
+        font-size: 20px;
+        text-align: start;
+        padding: 10px 0 20px 0;
+    }
+
+    .third {
+        background: transparent;
+        background-position: 100% 100%;
+    }
+
+    .third img {
+        display: block;
+    }
+}

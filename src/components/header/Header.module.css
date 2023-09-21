@@ -1,0 +1,99 @@
+.container {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid #ffffff2e;
+}
+
+.brandName {
+    color: #FFF;
+    font-family: Bold;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    flex: .5;
+    text-align: start;
+}
+
+.brandName span {
+    color: #D434FE;
+}
+
+.navbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 390px) {
+    .container {
+        height: 80px;
+    }
+
+    .brandName {
+        font-size: 36px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        flex: .5;
+    }
+
+    .nav {
+        display: inherit;
+        justify-content: space-between;
+        align-items: center;
+        flex: .8
+    }
+    
+    .navBtn {
+        color: #FFF;
+        font-family: MRegular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        cursor: pointer;
+    }
+
+    .active {
+        background: linear-gradient(90deg, #903AFF 3.08%, #FF26B9 93.85%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .registerBtn {
+        width: 172px;
+        height: 53px;
+        background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);
+        color: #FFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: MRegular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 4px;
+    }
+
+    .registerBtn:focus {
+        /* width: 170px;
+        height: 51px; */
+        background: transparent;
+        border: 2px solid #9A39FF;
+    }
+    
+}

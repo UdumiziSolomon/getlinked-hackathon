@@ -1,0 +1,87 @@
+.container {
+    padding: 20px;
+}
+
+.container > div > div {
+    margin-bottom: 40px;
+}
+
+p span {
+    color: #D434FE;
+}
+
+
+.desc, a, .loc, .term {
+    color: #FFF;
+    font-family: MRegular;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20.688px;
+    text-align: start;
+    margin-top: 10px;
+}
+
+.brandName {
+    color: #FFF;
+    font-family: Bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: start;
+}
+
+.term {
+    margin-top: 30px;
+}
+
+
+.title {
+    color: #D434FE;
+    font-size: 14px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-Items: flex-start;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.socials {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.socials > P {
+    color: #D434FE;
+}
+
+.info > p {
+    text-align: start;
+}
+
+.info > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.loc {
+    margin-top: 0;
+}
+
+.container > p {
+    text-align: center;
+}
+
+@media ( min-width: 399px ){
+    .container > div {
+        display: flex;
+    }
+}

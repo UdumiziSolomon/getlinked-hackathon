@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);
+    font-family: MRegular;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 14px 0 24px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}

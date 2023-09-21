@@ -1,0 +1,39 @@
+.container {
+    min-height: 200px;
+    padding: 20px;
+    display: grid;
+}
+
+.title {
+    color: #ffffff;
+    font-family: Bold;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.title span {
+    color: #D434FE;
+    display: block;
+}
+
+.desc {
+    color: #FFF;
+    text-align: center;
+    font-family: MRegular;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20.508px;
+}
+
+.second {
+    margin: 40px 0;
+}
+
+.second img {
+    width: 200px;
+    height: 176px;
+}

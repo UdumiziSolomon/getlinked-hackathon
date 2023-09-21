@@ -1,0 +1,56 @@
+.container {
+    min-height: 100px;
+}
+
+.container > div {
+    padding: 30px 20px 40px 20px;
+    border-bottom: 1px solid #ffffff2e;
+}
+
+.title {
+    color: #FFF;
+    text-align: center;
+    font-family: Bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.6px;
+}
+
+.title span {
+    color: #D434FE;
+    display: block;
+}
+
+.desc {
+    color: #FFF;
+    text-align: center;
+    font-family: MRegular;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 15px;
+}
+
+.desc span {
+    color: #D434FE;
+}
+
+@media (min-width: 399px){
+    .container > div {
+        display: flex;
+    }
+
+    .container > div:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
+    .container > div > div {
+        flex: .5
+    }
+
+    .desc {
+        text-align: start;
+    }
+}
