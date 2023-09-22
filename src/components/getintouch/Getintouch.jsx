@@ -9,12 +9,12 @@ const Getintouch = () => {
 
         <h4>Getintouch</h4>
 
-        <div className='contactInfo'>
+        <div>
             <span>Contact</span>
             <span>Information</span>
         </div>
 
-        <div className='address'>
+        <div>
             <span>27, Alara street</span>
             <span>Yaba 100012</span>
             <span>Lagos State</span>
@@ -25,10 +25,15 @@ const Getintouch = () => {
         </div>
 
         <div>
-            
+            <span>we are open from Monday-Friday</span>
+            <span>08:00am - 05:00pm</span>
         </div>
 
+        <span>Share on</span>
 
+        <div>
+
+        </div>
 
         </section>
     </section>
