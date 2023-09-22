@@ -1,0 +1,45 @@
+.getintouch{
+    height: 100%;
+    flex: 1;
+
+}
+
+.getintouchCont{
+    display: flex;
+    flex-direction: column;
+}
+
+h4{
+    font-family: Clash Display;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.contactInfo{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+
+}

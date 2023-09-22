@@ -1,0 +1,10 @@
+.contact{
+    height: 100vh;
+}
+
+.contactCont{
+    padding: 10px;
+    display: flex;
+    height: 100%;
+}
+
