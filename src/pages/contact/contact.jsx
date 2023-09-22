@@ -1,8 +1,15 @@
-import React from 'react'
+import Form from '../../components/form/Form'
+import Getintouch from '../../components/getintouch/Getintouch'
+import './contact.css'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <main className='contact'>
+        <section className='contactCont'>
+          <Getintouch/>
+          <Form/>
+        </section>
+    </main>
   )
 }
 
