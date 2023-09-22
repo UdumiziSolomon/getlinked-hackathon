@@ -1,4 +1,5 @@
 import './getintouch.css'
+import icon from './socialmedia.png'
 
 const Getintouch = () => {
 
@@ -7,7 +8,7 @@ const Getintouch = () => {
 
         <section className='getintouchCont'>
 
-        <h4>Getintouch</h4>
+        <h4>Get in touch</h4>
 
         <div>
             <span>Contact</span>
@@ -32,7 +33,7 @@ const Getintouch = () => {
         <span>Share on</span>
 
         <div>
-
+            <img src={icon} alt='Social Media'/>
         </div>
 
         </section>

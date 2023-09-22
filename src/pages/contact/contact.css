@@ -1,5 +1,5 @@
 .contact{
-    height: 100vh;
+    height: calc(100vh - 53px);
 }
 
 .contactCont{

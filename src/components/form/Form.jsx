@@ -1,18 +1,33 @@
 import './form.css'
+import SmForm from './smForm'
 
 
 const Form = () => {
     return (
       <section className='form'>
-        <h4>Questions or need assistance?</h4>
-        <h4>Let us know about it!</h4>
 
-        <input type='text' placeholder='First Name'/>
-        <input type='email' placeholder='Mail'/>
+        <section className='formCont'>
 
-        <textarea placeholder='Message' rows={5}/>
+            <section className='formContMain'>
+            <div>
+                <h4>Questions or need assistance?</h4>
+                <h4>Let us know about it!</h4>
+            </div>
 
-        <button>Submit</button>
+            <input type='text' placeholder='First Name'/>
+            <input type='email' placeholder='Mail'/>
+
+            <textarea placeholder='Message'/>
+
+            <button>Submit</button>
+            </section>
+
+
+        </section>
+
+        <section className='smScreen'>
+            <SmForm/>
+        </section>
       </section>
     )
   }
