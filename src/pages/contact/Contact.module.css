@@ -1,0 +1,127 @@
+.container {
+    padding: 30px 40px;
+    background-image: url('/public/resources/images/contactBg.png');
+    background-position: 100% 100%;
+}
+
+.back {
+    margin-bottom: 30px;
+    text-align: start;
+}
+
+.first {
+    display: none;
+}
+
+.subTitle {
+    color: #D434FE;
+    font-family: Bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: start;
+}
+
+.desc {
+    color: #FFF;
+    font-family: MRegular;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 30px 0;
+    text-align: start;
+}
+
+.input {
+    width: 100%;
+    min-height: 47px;
+    border-radius: 4px;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.03);
+    color: #FFF;
+    font-family: MRegular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    resize: none;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.share {
+    margin-top: 40px;
+}
+
+.share > p {
+    color: #D434FE;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+@media (min-width: 399px){
+    .container {
+        display: flex;
+        padding: 50px 70px;
+    }
+
+    .back {
+        display: none;
+    }
+    
+    .first {
+        display: block;
+    }
+
+    .first, .second {
+        flex: 1;
+    }
+
+    .title {
+        color: #D434FE;
+        font-family: Bold;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: start;
+    }
+
+    .desc {
+        font-size: 16px;
+        margin-top: 40px;
+    }
+
+    .desc span {
+        color: #fff;
+        display: block;
+        margin-top: 7px;
+    }
+
+    .second {
+        padding: 60px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.03);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .title ~ p {
+        display: none;
+    }
+
+    .form {
+        margin-top: 40px;
+    }
+
+    .share {
+        display: none;
+    }
+}
