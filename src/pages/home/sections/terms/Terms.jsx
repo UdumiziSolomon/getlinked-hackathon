@@ -42,7 +42,7 @@ const Terms = () => {
             </div>
             <div className={styles.imgWrapper}>
                 <img src="resources/images/terms.png" alt="terms.png" />
-                <img src="resources/images/termsDesktop.png" alt="terms.png" />
+                {/* <img src="resources/images/termsDesktop.png" alt=gi"terms.png" /> */}
             </div>
         </div>
     )

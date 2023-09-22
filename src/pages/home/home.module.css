@@ -1,5 +1,6 @@
 .container {
   flex: 1;
+  background-image: url('/public/resources/images/homeBg.png');
 }
 
 /* .title {

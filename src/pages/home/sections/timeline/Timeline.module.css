@@ -12,6 +12,25 @@
   margin-top: 20px;
 }
 
+.subtitle {
+  color: #FFF;
+  font-family: Bold;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26.6px
+}
+
+.subDesc {
+  color: #FFF;
+  text-align: center;
+  font-family: MRegular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24.136px;
+}
+
 .first {
   grid-area: first;
   display: flex;

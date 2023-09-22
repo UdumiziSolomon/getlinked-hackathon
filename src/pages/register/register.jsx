@@ -5,7 +5,9 @@ import { Header, Modal} from '../../components';
 const Register = () => {
   return (
     <>
-        <Header />
+        <div className={styles.header}>
+            <Header />
+        </div>
         <div className={styles.container}>
             {/* <Modal />  */}
             <div className={styles.top}>
@@ -23,7 +25,9 @@ const Register = () => {
                     <p className={styles.title}>CREATE YOUR ACCOUNT</p>
                 </div>
             </div>
-            <div className={styles.topDesktop} />
+            <div className={styles.topDesktop}>
+                <img src="resources/images/seatedmanDesktop.png" alt="seatedman.png" width={600} height={600} />
+            </div>
             <div className={styles.bottom}>
                 <div>
                     <div className={styles.heroDesktop}>
@@ -74,7 +78,7 @@ const Register = () => {
                         </div>
                     </div>
                     <p className={styles.review}>Please review your registration details before submitting</p>
-                    <div style={{display: 'flex', gap: '1px'}}>
+                    <div className={styles.policyWrapper}>
                         <img src="resources/images/checkbox.png" alt="checkbox.png" width={14} height={14} />   
                         <p className={styles.policy}>I agreed with the event terms and conditions
                         and privacy policy</p>
@@ -89,4 +93,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default Register;

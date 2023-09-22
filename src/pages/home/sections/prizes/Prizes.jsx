@@ -10,7 +10,7 @@ const Prizes = () => {
             </div>
             <div className={styles.second}>
                 <img src="resources/images/trophy.png" alt="trophy.png" />
-                <img src="resources/images/trophyDesktop.png" alt="trophy.png" width={548} height={544} />
+                {/* <img src="resources/images/trophyDesktop.png" alt="trophy.png" width={548} height={544} /> */}
             </div>
             <div className={styles.third}>
                 <img src="resources/images/prizes.png" alt="prizes.png" />

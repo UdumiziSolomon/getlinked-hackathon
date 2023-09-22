@@ -5,6 +5,8 @@ import { data } from './data';
 const Timeline = () => {
   return (
     <div className={styles.container} id="timeline">
+      <p className={styles.subtitle}>Timeline</p>
+      <p className={styles.subDesc}>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
       {
         data.map((item, index) => (
           <div key={index}>

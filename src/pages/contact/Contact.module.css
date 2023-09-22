@@ -23,6 +23,10 @@
     text-align: start;
 }
 
+.subTitle span {
+    display: block;
+}
+
 .desc {
     color: #FFF;
     font-family: MRegular;
@@ -70,7 +74,8 @@
 @media (min-width: 399px){
     .container {
         display: flex;
-        padding: 50px 70px;
+        background-image: url('/public/resources/images/contactBgDesktop.png');
+        padding: 150px 70px 40px 70px;
     }
 
     .back {
@@ -79,6 +84,7 @@
     
     .first {
         display: block;
+        margin-top: 60px;
     }
 
     .first, .second {
@@ -106,6 +112,16 @@
         margin-top: 7px;
     }
 
+    .shareDesktop {
+        text-align: start;
+    }
+
+    .shareDesktop .desc {
+        color: #D434FE;
+    }
+
+
+
     .second {
         padding: 60px;
         border-radius: 12px;
@@ -113,7 +129,7 @@
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
 
-    .title ~ p {
+    .subTitle ~ p {
         display: none;
     }
 
