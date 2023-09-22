@@ -1,5 +1,5 @@
 .container {
-
+    border-bottom: 1px solid #ffffff2e;
 }
 
 .title {
@@ -22,6 +22,37 @@
     margin-top: 15px;
 }
 
-.container > div:last-child {
+.imgWrapper {
     margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.imgWrapper img:last-child {
+    display: none;
+}
+
+
+
+@media (min-width: 399px) {
+    .container {
+        padding: 50px 70px;
+    }
+    .title {
+        font-size: 32px;
+    }
+
+    .desc {
+        width: 50%;
+        font-size: 14px;
+        margin: 30px 0 50px 0 ;
+    }
+
+    .imgWrapper img:first-child {
+        display: none;
+    }
+
+    .imgWrapper img:last-child {
+        display: block
+    }
 }

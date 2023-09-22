@@ -6,7 +6,6 @@ import { QueryClient, QueryClientProvider } from "react-query";
 
 // imports
 import { Contact, Home, Register } from "./pages";
-import { Header } from "./components";
 
 // new queryClient
 const queryClient = new QueryClient();
@@ -15,7 +14,6 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />

@@ -8,7 +8,7 @@ const Header = () => {
       <NavLink to="/" className={styles.brandName}>get<span>Linked</span></NavLink>
       <div className={styles.navbar}>
         <nav className={styles.nav}>
-          <NavLink to='#' activeClassName={styles.active} className={styles.navBtn}>TimeLine</NavLink>
+          <NavLink to='/#timeline' activeClassName={styles.active} className={styles.navBtn}>TimeLine</NavLink>
           <NavLink to='#' activeClassName={styles.active} className={styles.navBtn}>Overview</NavLink>
           <NavLink to='#' activeClassName={styles.active} className={styles.navBtn}>FAQs</NavLink>
           <NavLink to="/contact" className={styles.navBtn}>Contact</NavLink>

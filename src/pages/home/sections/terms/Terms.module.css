@@ -1,0 +1,106 @@
+.container {
+    padding: 40px 20px;
+}
+
+.container > div:last-child img {
+    width: 241px;
+    height: 380.66px;
+}
+
+.title {
+    color: #FFF;
+    text-align: center;
+    font-family: Bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title span {
+    display: block;
+    color: #D434FE;
+}
+
+.title ~ p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: MRegular;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.policy {
+    background: rgba(217, 217, 217, 0.03);
+    padding: 40px 20px;
+    margin: 30px 0;
+    border-radius: 5px;
+    border: 1px solid #D434FE;
+}
+
+.subTitle {
+    margin-top: 40px;
+    color: #D434FE;
+    font-size: 13px;
+    text-align: start;
+}
+
+.subTitle ~ p {
+    text-align: start;
+    font-weight: 700;
+}
+
+.licenses {
+    margin-top: 30px;
+}
+
+.license {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.license > img{
+    width: 17px;
+    height: 17px;
+}
+
+.license > p {
+    text-align: start;
+}
+
+
+@media (min-width: 399px){
+    .container {
+        display: flex;
+        padding: 70px;
+    }
+
+    .container > div {
+        flex: 1;
+    }
+
+    .title {
+        font-size: 32px;
+        text-align: start;
+    }
+
+    .desc {
+        font-size: 14px;
+        text-align: start;
+    }
+
+    .imgWrapper img:first-child {
+        display: none;
+    }
+
+    imgWrapper img:last-child {
+        display: block
+    }
+}

@@ -6,8 +6,9 @@ const Overview = () => {
     return(
         <div className={styles.container}>
             <div>
-                <div>
+                <div className={styles.imgWrapper}>
                     <img src="resources/images/idea.png" alt="idea.png" width={200.07} height={217} />
+                    <img src="resources/images/ideaDesktop.png" alt="idea.png" width={402} height={340.32} />
                 </div>
                 <div className={styles.body}>
                     <div>
@@ -19,9 +20,10 @@ const Overview = () => {
                     </p>
                 </div>
             </div>
-            <div>
-                <div>
+            <div className={styles.second}>
+                <div className={styles.imgWrapper}>
                     <img src="resources/images/rules.png" alt="rules.png" width={205} height={267} />
+                    <img src="resources/images/rulesDesktop.png" alt="rules.png" width={402} height={386.85} />
                 </div>
                 <div>
                     <p className={styles.title}>Rules and <span>Guidelines</span></p>
@@ -32,8 +34,9 @@ const Overview = () => {
 
             </div>
             <div>
-                <div>
+                <div className={styles.imgWrapper}>
                     <img src="resources/images/criteria.png" alt="criteria.png" width={241} height={199.62} />
+                    <img src="resources/images/criteriaDesktop.png" alt="criteria.png"  />
                 </div>
                 <div>
                     <p className={styles.title}>Judging Criteria <span>Key attributes</span></p>
@@ -42,7 +45,7 @@ const Overview = () => {
                     <p className={styles.desc}><span>Impact and Relevance:</span>  Determine the potential impact of the solution in the real world. Does it address a significant problem, and is it relevant to the target audience? Judges would assess the potential social, economic, or environmental benefits.</p>
                     <p className={styles.desc}><span>Technical Complexity:</span>   Evaluate the technical sophistication of the solution. Judges would consider the complexity of the code, the use of advanced technologies or algorithms, and the scalability of the solution.</p>
                     <p className={styles.desc}><span>Adherence to Hackathon Rules:</span>   Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements.</p>
-                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                    <div className={styles.btnWrapper}>
                         <Button title='Read More' width='96.35px' height='31.346px' textSize='12px' />
                     </div>
                 </div>

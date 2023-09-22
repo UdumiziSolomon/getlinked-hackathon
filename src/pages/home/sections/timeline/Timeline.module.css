@@ -1,13 +1,125 @@
 .container {
+  padding: 40px 20px;
 }
-.topLayer {
 
+.container > div {
+  display: grid;
+  grid-template-areas:
+    "first second"
+    "first third"
+  ;
+  grid-column-gap: 10px;
+  margin-top: 20px;
 }
-.topLayerTopText {
-  font-family: Bold;
-  color: #fff;
+
+.first {
+  grid-area: first;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
 }
-.topLayerSubText {
+
+.first div {
+  width: 2px;
+  height: 77px;
+  background-color: #D434FE;;
+}
+
+.first span {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #903AFF 0%, #D434FE 100%);
+  color: #FFF;
   font-family: MRegular;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 10px;
+}
+
+.second {
+  grid-area: second;
+}
+
+.title, .desc {
+  color: #D434FE;
+  font-family: MRegular;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: start;
+}
+
+.second p:last-child {
   color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.third {
+  grid-area: third;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3px;
+}
+
+
+@media (min-width: 399px){
+  .container > div {
+    grid-template-areas: 
+      "second first third"
+    ;
+    grid-template-columns: 2.5fr 1fr 2.5fr;
+    padding: 0 35px;
+    margin-top: 40px;
+  }
+
+  .container > div:nth-child(odd) > .second{
+    grid-area: third;
+  }
+
+  .container > div:nth-child(odd) > .second > p {
+    text-align: start;
+  }
+
+  .container > div:nth-child(odd) > .third {
+    grid-area: second;
+    justify-content: flex-end;
+  }
+
+  .first {
+    gap: 8px;
+  }
+
+  .first div {
+    width: 3px;
+    height: 120px;
+  }
+
+  .first span {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+  }
+
+  .second p {
+    text-align: end;
+    font-size: 20px;
+  }
+
+  .second p:last-child {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .third p {
+    text-align: start;
+    font-size: 20px;
+  }
 }

@@ -7,6 +7,10 @@
     border-bottom: 1px solid #ffffff2e;
 }
 
+.imgWrapper img:last-child {
+    display: none;
+}
+
 .title {
     color: #FFF;
     text-align: center;
@@ -37,9 +41,26 @@
     color: #D434FE;
 }
 
+.btnWrapper {
+    display: flex;
+    justify-content: center;
+}
 @media (min-width: 399px){
     .container > div {
         display: flex;
+        padding: 50px 70px;
+    }
+
+    .imgWrapper img:first-child {
+        display: none;
+    }
+
+    .imgWrapper img:last-child {
+        display: block;
+    }
+
+    .second > .imgWrapper {
+        text-align: end;
     }
 
     .container > div:nth-child(even){
@@ -47,10 +68,26 @@
     }
 
     .container > div > div {
-        flex: .5
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 32px;
+        text-align: start;
+        line-height: 40px;
     }
 
     .desc {
+        font-size: 16px;
         text-align: start;
+        line-height: 26px;
+    }
+
+    .btnWrapper {
+        justify-content: flex-start;
+        margin-top: 30px;
     }
 }
