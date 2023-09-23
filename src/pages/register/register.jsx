@@ -16,9 +16,7 @@ const Register = () => {
 
 
     const getCategories = async () => {  
-        const res = await fetch('https://backend.getlinked.ai/hackathon/categories-list', {
-            method: 'GET'
-        });
+        const res = await fetch('https://backend.getlinked.ai/hackathon/categories-list');
         const data = await res.json();
         return data
     }
@@ -33,7 +31,7 @@ const Register = () => {
                 body: JSON.stringify(body)
             })
     
-            if(!res.ok){
+            if(res.ok){
                 setIsSuccessful(true)
             }
         } catch(error) {
@@ -115,11 +113,9 @@ const Register = () => {
                             <div className={styles.inputWrapper}>
                                 <p className={styles.label}>Category</p>
                                 <select className={styles.select} onChange={e => setCategory(e.target.value)} required>
-                                    {/* {
-                                        categories.map(item => {
-                                            <option value={item.id}>{item.name}</option>
-                                        })
-                                    } */}
+                                    {/* {categories.map(item => (
+                                        <option value={item.id} key={item.id}>{item.name}</option>
+                                    ))} */}
                                 </select>
                             </div>
                             <div className={styles.inputWrapper}>

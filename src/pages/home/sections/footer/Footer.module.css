@@ -72,6 +72,10 @@ p span {
     gap: 15px;
 }
 
+.info > div:first-child {
+    align-items: flex-end;
+}
+
 .loc {
     margin-top: 0;
 }

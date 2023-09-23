@@ -113,10 +113,16 @@ a {
     }
 
     .active {
+        font-family: MRegular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
         background: linear-gradient(90deg, #903AFF 3.08%, #FF26B9 93.85%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        cursor: pointer;
     }
 
     .registerBtn {
@@ -135,10 +141,22 @@ a {
         border-radius: 4px;
     }
 
-    .registerBtn:focus {
+    .registerActive {
         /* width: 170px;
         height: 51px; */
+        width: 172px;
+        height: 53px;
+        color: #FFF;
         background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: MRegular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 4px;
         border: 2px solid #9A39FF;
     }
     
