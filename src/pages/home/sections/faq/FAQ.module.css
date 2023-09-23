@@ -104,6 +104,11 @@
         font-size: 20px;
     }
 
+    .second {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .second img:first-child {
         display: none;
     }

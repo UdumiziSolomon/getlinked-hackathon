@@ -59,8 +59,9 @@
         display: block;
     }
 
-    .second > .imgWrapper {
-        text-align: end;
+    .second .imgWrapper {
+        display: flex;
+        justify-content: flex-end;
     }
 
     .container > div:nth-child(even){

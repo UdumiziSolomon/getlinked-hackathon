@@ -96,4 +96,9 @@
         text-align: start;
     }
 
+    .imgWrapper img {
+        width: 528px;
+        height: 722px;
+    }
+
 }

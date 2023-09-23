@@ -36,7 +36,7 @@ const Overview = () => {
             <div>
                 <div className={styles.imgWrapper}>
                     <img src="resources/images/criteria.png" alt="criteria.png" width={241} height={199.62} />
-                    <img src="resources/images/criteriaDesktop.png" alt="criteria.png" width={369} height={367.97}  />
+                    <img src="resources/images/criteriaDesktop.png" alt="criteria.png" width={502} height={500.59}  />
                 </div>
                 <div>
                     <p className={styles.title}>Judging Criteria <span>Key attributes</span></p>
