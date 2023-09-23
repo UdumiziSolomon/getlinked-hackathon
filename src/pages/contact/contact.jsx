@@ -1,9 +1,25 @@
 import React, { useState } from 'react';
+import { useMutation } from 'react-query';
 import styles from './contact.module.css';
 import { Header, Button } from '../../components';
 
 const Contact = () => {
-  // const [] = useState();
+  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+
+  const contactUs = async (body) => {
+    const res = fetch('', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body)
+    })
+  }
+
+  const { mutateAsync: contact } = useMutation(contactUs)
 
   return(
     <>
@@ -33,10 +49,10 @@ const Contact = () => {
             <p className={styles.desc}>Email us below to any question related to our event</p>
           </div>
           <div className={styles.form}>
-            <input type="text" placeholder="Team's Name" className={styles.input} />
-            <input type="text" placeholder="Topic" className={styles.input} />
-            <input type="text" placeholder="Email" className={styles.input} />
-            <textarea rows="6" placeholder='Message' className={styles.input}></textarea>
+            <input type="text" placeholder="First Name" className={styles.input} value={firstName} onChange={e => setFirstName(e.target.value)} />
+            <input type="text" placeholder="Email" className={styles.input} value={email} onChange={e => setEmail(e.target.email)} />
+            <input type="text" placeholder="Phone Number" className={styles.input} value={phone} onChange={e => setPhone(e.target.value)} />
+            <textarea rows="6" placeholder='Message' className={styles.input} value={message} onChange={e => setMessage(e.target.value)}></textarea>
             <div style={{display: 'flex', justifyContent: 'center'}}>
               <Button title='submit' />
             </div>
