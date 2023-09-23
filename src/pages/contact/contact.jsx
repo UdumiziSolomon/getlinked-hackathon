@@ -12,15 +12,21 @@ const Contact = () => {
   const [isSuccessful, setIsSuccessful] = useState(false)
   
   const contactUs = async (body) => {
-    const res = fetch('https://backend.getlinked.ai/hackathon/contact-form', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body)
-    })
+    try {
+      const res = fetch('https://backend.getlinked.ai/hackathon/contact-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body)
+      })
 
-    console.log(res);
+      if(res.ok) {
+        setIsSuccessful(true);
+      }  
+    } catch(error){
+      console.log(error);
+    }
   }
 
   const { mutateAsync: contact } = useMutation(contactUs)
@@ -28,7 +34,7 @@ const Contact = () => {
   const submitHandler = e => {
     e.preventDefault();
 
-    contact({email, first_name: firstName, phone_number: number, message})
+    contact({email, first_name: firstName, phone_number: phone, message})
   }
 
   return(
@@ -65,7 +71,7 @@ const Contact = () => {
           </div>
           <form className={styles.form} onSubmit={submitHandler}>
             <input type="text" placeholder="First Name" className={styles.input} value={firstName} onChange={e => setFirstName(e.target.value)} required />
-            <input type="text" placeholder="Email" className={styles.input} value={email} onChange={e => setEmail(e.target.email)} required />
+            <input type="text" placeholder="Email" className={styles.input} value={email} onChange={e => setEmail(e.target.value)} required />
             <input type="text" placeholder="Phone Number" className={styles.input} value={phone} onChange={e => setPhone(e.target.value)} required />
             <textarea rows="6" placeholder='Message' className={styles.input} value={message} onChange={e => setMessage(e.target.value)} required></textarea>
             <div style={{display: 'flex', justifyContent: 'center'}}>
