@@ -4,6 +4,10 @@
     background-position: 100% 100%;
 }
 
+.header {
+    display: none;
+}
+
 .back {
     margin-bottom: 30px;
     text-align: start;
@@ -76,6 +80,10 @@
         display: flex;
         background-image: url('/public/resources/images/contactBgDesktop.png');
         padding: 150px 70px 40px 70px;
+    }
+
+    .header {
+        display: block;
     }
 
     .back {

@@ -23,12 +23,12 @@
     line-height: normal;
 }
 
-.first p span {
+.first p strong {
     display: inline-block;
     position: relative;
 }
 
-.first p span img {
+.first p strong img {
     position: absolute;
     left: 0;
     bottom: -10px
@@ -52,12 +52,12 @@
     line-height: normal;
 }
 
-.title p span {
+.title p strong {
     display: inline-block;
     position: relative;
 }
 
-.title p span img {
+.title p strong img {
     width: 18px;
     height: 26px;
     position: absolute;
@@ -92,7 +92,7 @@
 
 .timer {
     color: #FFF;
-    font-family: MRegular;
+    font-family: Unica;
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
@@ -135,7 +135,7 @@
         font-size: 26px;
     }
 
-    .first p span img {
+    .first p strong img {
         width: 200px;
         stroke-width: 5px;
         bottom: -15px;
@@ -152,7 +152,7 @@
         text-align: start;
     }
 
-    .title p span img {
+    .title p strong img {
         width: 33px;
         height: 53px;
         left: 10px;

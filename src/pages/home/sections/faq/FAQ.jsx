@@ -15,7 +15,7 @@ const FAQ = () => {
     }
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id='faq'>
             <div>
                 <div>
                     <p className={styles.title}>Frequently Ask <span>Question</span></p>
@@ -26,7 +26,7 @@ const FAQ = () => {
                                 <div className={styles.question} key={index}>
                                     <div>
                                         <p className={styles.desc}>{question}</p>
-                                        <span onClick={() => clickHandler(index)}>+</span>
+                                        <span onClick={() => clickHandler(index)} style={{transform: selected === index ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform 100ms ease-in-out'}}>+</span>
                                     </div>
                                     { selected === index && 
                                         <p className={styles.desc}>
@@ -44,6 +44,7 @@ const FAQ = () => {
             </div>
             <div className={styles.second}>
                 <img src="resources/images/faq.png" alt="faq.png" />
+                <img src="resources/images/faqDesktop.png" alt="faq.png" width={500} height={500} />
             </div>
         </div>
     )

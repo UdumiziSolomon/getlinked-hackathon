@@ -66,9 +66,13 @@
     transition: all 0.5s ease-in-out;
 }
 
-.second img {
+.second img:first-child {
     width: 243.39px;
     height: 262px
+}
+
+.second img:last-child {
+    display: none;
 }
 
 @media (min-width: 399px){
@@ -98,5 +102,13 @@
     .question span {
         cursor: pointer;
         font-size: 20px;
+    }
+
+    .second img:first-child {
+        display: none;
+    }
+
+    .second img:last-child {
+        display: block;
     }
 }

@@ -1,34 +1,54 @@
 import React, {useState} from 'react';
 import { useMutation, useQuery } from 'react-query';
+import { NavLink } from 'react-router-dom';
 import styles from './register.module.css';
 import { Header, Modal} from '../../components';
 
 const Register = () => {
-    const [categories, setCategories] = useState('')
     const [teamName, setTeamName] = useState('')
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
     const [topic, setTopic] = useState('')
-    const [category, setCategory] = useState('')
+    const [category, setCategory] = useState('Select a category')
     const [size, setSize ] = useState('')
+    const [isSuccessful, setIsSuccessful] = useState(false)
+    const [checked, setChecked] = useState(false)
 
-    const getCategories = () => {
 
+    const getCategories = async () => {  
+        const res = await fetch('https://backend.getlinked.ai/hackathon/categories-list', {
+            method: 'GET'
+        });
+        const data = await res.json();
+        return data
     }
     
     const registerUser = async (body) => {
-        const  res = await fetch('https://backend.getlinked.ai/hackathon/registration', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(body)
-        })
-        console.log(res)
+        try {
+            const res = await fetch('https://backend.getlinked.ai/hackathon/registration', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body)
+            })
+    
+            if(!res.ok){
+                setIsSuccessful(true)
+            }
+        } catch(error) {
+            console.log(error)
+        }
     }
 
-    const { query } = useQuery("categories", getCategories)
-    const { mutationAsync: register } = useMutation(registerUser);
+    const { query: categories } = useQuery('categories', getCategories);
+    console.log(categories)
+    const { mutateAsync: register } = useMutation(registerUser);
+
+    const submitHandler = e => {
+        e.preventDefault();
+        register({team_name: teamName, phone_number: phone, email: email, project_topic: topic, catory: category, group_size: size, privacy_poclicy_accepted: checked})
+    }
 
 
     return (
@@ -37,10 +57,12 @@ const Register = () => {
                 <Header />
             </div>
             <div className={styles.container}>
-                {/* <Modal />  */}
+                { isSuccessful && <Modal close={() => setIsSuccessful(false)} />  }
                 <div className={styles.top}>
                     <div style={{display: 'flex', alignItems: 'center', marginLeft: '30px'}}>
-                        <img src="resources/images/backIcon.png" alt="seatedman.png" width={20} height={20} />
+                        <NavLink to='/'>
+                            <img src="resources/images/backIcon.png" alt="backIcon.png" width={20} height={20} />
+                        </NavLink>
                         <p className={styles.reg}>Register</p>
                     </div>
                     <img src="resources/images/seatedman.png" alt="seatedman.png" width={200} height={200} />
@@ -57,7 +79,7 @@ const Register = () => {
                     <img src="resources/images/seatedmanDesktop.png" alt="seatedman.png" width={600} height={600} />
                 </div>
                 <div className={styles.bottom}>
-                    <div>
+                    <form onSubmit={submitHandler}>
                         <div className={styles.heroDesktop}>
                             <p className={styles.register}>Register</p>
                             <div>
@@ -71,50 +93,58 @@ const Register = () => {
                         <div className={styles.inputGroup}>
                             <div className={styles.inputWrapper}>
                                 <p className={styles.label}>Team's Name</p>
-                                <input type="text" placeholder='Enter the name of your group' className={styles.input} value={teamName} onChange={e => setTeamName(e.target.value)} />
+                                <input type="text" placeholder='Enter the name of your group' className={styles.input} value={teamName} onChange={e => setTeamName(e.target.value)} required />
                             </div>
                             <div className={styles.inputWrapper}>
                                 <p className={styles.label}>Phone Number</p>
-                                <input type="text" placeholder='Enter your phone number' className={styles.input} value={phone} onChange={e => setPhone(e.target.value)} />
+                                <input type="text" placeholder='Enter your phone number' className={styles.input} value={phone} onChange={e => setPhone(e.target.value)} required />
                             </div>
                         </div>
                         <div className={styles.inputGroup}>
                             <div className={styles.inputWrapper}>
                                 <p className={styles.label}>Email</p>
-                                <input type="text" placeholder='Enter your email address' className={styles.input} value={email} onChange={e => setEmail(e.target.value)} />
+                                <input type="text" placeholder='Enter your email address' className={styles.input} value={email} onChange={e => setEmail(e.target.value)} required />
                             </div>
                             <div className={styles.inputWrapper}>
                                 <p className={styles.label}>Project's Topic</p>
-                                <input type="text" placeholder='What is your group project topic' className={styles.input} value={topic} onChange={e => setTopic(e.target.value)} />
+                                <input type="text" placeholder='What is your group project topic' className={styles.input} value={topic} onChange={e => setTopic(e.target.value)} required />
                             </div>
                         </div>
                         <div className={styles.selectGroup}>
                             {/* <img src="resources/images/pinkstar.png" alt="pinkstar.png" width={13} height={15} className={styles.pinkstar2} />    */}
                             <div className={styles.inputWrapper}>
                                 <p className={styles.label}>Category</p>
-                                <select className={styles.select} onChange={e => setCategory(e.target.value)}>
-                                    <option value="1">Select your category</option>
-                                    <option value="2">Web Development</option>
+                                <select className={styles.select} onChange={e => setCategory(e.target.value)} required>
+                                    {/* {
+                                        categories.map(item => {
+                                            <option value={item.id}>{item.name}</option>
+                                        })
+                                    } */}
                                 </select>
                             </div>
                             <div className={styles.inputWrapper}>
                                 <p className={styles.label}>Group Size</p>
-                                <select className={styles.select} onChange={e => setSize(e.target.value)}>
-                                    <option value="1">Select</option>
-                                    <option value="2">Web Development</option>
+                                <select className={styles.select} onChange={e => setSize(e.target.value)} required>
+                                   {
+                                        Array.from({ length: 100 }).map((_, index) => (
+                                            <option className={styles.option} value={index + 1} key={index}>
+                                            {index + 1}
+                                            </option>
+                                        ))                                      
+                                   }
                                 </select>
                             </div>
                         </div>
                         <p className={styles.review}>Please review your registration details before submitting</p>
                         <div className={styles.policyWrapper}>
-                            <img src="resources/images/checkbox.png" alt="checkbox.png" width={14} height={14} />   
+                            <img src={`resources/images/${checked ? 'checker' : 'checkbox' }.png`} alt="checkbox.png" width={14} height={14} onClick={() => setChecked(!checked)} />   
                             <p className={styles.policy}>I agreed with the event terms and conditions
                             and privacy policy</p>
                         </div>
                         <div style={{display: 'flex', justifyContent: 'center'}}>
-                            <div className={styles.submit} onPress={() => register({team_name: teamName, phone_number: phone, email: email, project_topic: topic, catory: category, group_size: size, privacy_poclicy_accepted: true})}>Submit</div>
+                            <button type='submit' className={styles.submit}>Submit</button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </>

@@ -112,6 +112,15 @@
     justify-content: flex-end;
   }
 
+  .subtitle {
+    font-size: 32px;
+  }
+
+  .subDesc {
+    font-size: 14px;
+    margin: 20px 0 40px 0;
+  }
+
   .first {
     gap: 8px;
   }

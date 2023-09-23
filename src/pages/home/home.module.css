@@ -18,3 +18,8 @@
   color: #D434FE;
 } */
 
+@media (min-width: 768px){
+  .container {
+    background: transparent;
+  }
+}

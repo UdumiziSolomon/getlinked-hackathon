@@ -96,11 +96,4 @@
         text-align: start;
     }
 
-    .imgWrapper img:first-child {
-        display: none;
-    }
-
-    imgWrapper img:last-child {
-        display: block
-    }
 }

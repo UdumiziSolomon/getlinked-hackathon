@@ -2,28 +2,33 @@ import React, { useState } from 'react';
 import { useMutation } from 'react-query';
 import styles from './contact.module.css';
 import { Header, Button } from '../../components';
+import { NavLink } from 'react-router-dom';
 
 const Contact = () => {
   const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
-
+  
   const contactUs = async (body) => {
-    const res = fetch('', {
+    const res = fetch('https://backend.getlinked.ai/hackathon/contact-form', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body)
     })
+
+    console.log(res);
   }
 
   const { mutateAsync: contact } = useMutation(contactUs)
 
   return(
     <>
-      <Header />
+      <div className={styles.header}>
+       <Header />
+      </div>
       <div className={styles.container}>
         <div className={styles.first}>
           <p className={styles.title}>Get in Touch</p> 
@@ -41,8 +46,10 @@ const Contact = () => {
           </div>
         </div>
         <div className={styles.second}>
-          <div className={styles.back}>
-            <img src="resources/images/backIcon.png" alt="backIcon.png" />
+          <div  className={styles.back}>
+            <NavLink to='/'>
+              <img src="resources/images/backIcon.png" alt="backIcon.png" />
+            </NavLink>
           </div>
           <div>
             <p className={styles.subTitle}>Questions or need assistance? <span>Let us know about it</span></p>

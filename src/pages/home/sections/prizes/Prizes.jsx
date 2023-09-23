@@ -9,12 +9,11 @@ const Prizes = () => {
                 <p className={styles.desc}>Highlight of the prizes or rewards for winners and for participants.</p>
             </div>
             <div className={styles.second}>
-                <img src="resources/images/trophy.png" alt="trophy.png" />
-                {/* <img src="resources/images/trophyDesktop.png" alt="trophy.png" width={548} height={544} /> */}
-            </div>
+                <img src="resources/images/trophy.png" alt="trophy.png" width={261.278} height={239}  />
+                <img src="resources/images/trophyDesktop.png" alt="trophy.png" width={420.07} height={417} />
+            </div> 
             <div className={styles.third}>
-                <img src="resources/images/prizes.png" alt="prizes.png" />
-                {/* <img src="resources/images/medalsDesktop.png" alt="prizes.png" /> */}
+                <img src="resources/images/medalsDesktop.png" alt="prizes.png" />
             </div>
         </section>
     )

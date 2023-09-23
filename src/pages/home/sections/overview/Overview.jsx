@@ -4,7 +4,7 @@ import Button from '../../../../components/button/Button';
 
 const Overview = () => {
     return(
-        <div className={styles.container}>
+        <div className={styles.container} id='overview'>
             <div>
                 <div className={styles.imgWrapper}>
                     <img src="resources/images/idea.png" alt="idea.png" width={200.07} height={217} />
@@ -36,7 +36,7 @@ const Overview = () => {
             <div>
                 <div className={styles.imgWrapper}>
                     <img src="resources/images/criteria.png" alt="criteria.png" width={241} height={199.62} />
-                    <img src="resources/images/criteriaDesktop.png" alt="criteria.png"  />
+                    <img src="resources/images/criteriaDesktop.png" alt="criteria.png" width={369} height={367.97}  />
                 </div>
                 <div>
                     <p className={styles.title}>Judging Criteria <span>Key attributes</span></p>

@@ -2,8 +2,12 @@
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 110px;
+    padding: 30px 0;
     position: relative;
+}
+
+.header {
+    display: none;
 }
 
 .top {
@@ -147,6 +151,15 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+option {
+    background-color: #150E28;
+}
+
+option:focus {
+    /* background-color: #D434FE; */
+    background-color: #150E28;
+}
+
 .review {
     color: #FF26B9;
     font-family: MRegular;
@@ -185,16 +198,22 @@
     font-weight: 400;
     line-height: normal;
     margin: 14px 0 24px 0;
+    border: none;
     border-radius: 4px;
 }
 
 @media (min-width: 390px) {
     .container {
         flex-direction: row;
-        background-image: url("/public/resources/images/registerbg.png");
-        background-size: 100% 100%;
-        padding: 30px;
+        /* background-image: url("/public/resources/images/registerbg.png"); */
+        /* background-size: 100% 100%; */
+        background: transparent;
+        margin-top: 110px;
     }   
+
+    .header {
+        display: block
+    }
 
     .top {
         display: none;

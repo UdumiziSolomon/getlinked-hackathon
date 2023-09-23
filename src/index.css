@@ -44,6 +44,11 @@
   src: url('../public/resources/fonts/MRegular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: Unica;
+  src: url('../public/resources/fonts/Unica.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

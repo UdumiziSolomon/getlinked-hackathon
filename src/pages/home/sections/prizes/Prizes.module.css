@@ -32,9 +32,13 @@
     margin: 40px 0;
 }
 
-.second img {
-    width: 200px;
-    height: 176px;
+.second img:last-child{
+    display: none;
+}
+
+.third img {
+    width: 261.278px;
+    height: 239px;
 }
 
 @media (min-width: 399px){
@@ -75,10 +79,19 @@
     }
 
     .second img:first-child {
-        display: none;
+        display: none
+    }
+
+    .second img:last-child {
+        display: block
     }
 
     .third {
         grid-area: third;
+    }
+
+    .third img {
+        width: 426.35px;
+        height: 390px
     }
 }
