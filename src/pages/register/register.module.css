@@ -151,6 +151,10 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.select {
+    padding: 0 10px;
+}
+
 option {
     background-color: #150E28;
 }
@@ -291,6 +295,10 @@ option:focus {
 
     .selectGroup div:first-child, .selectGroup div:last-child {
         flex: .5;
+    }
+
+    option {
+        padding: 20px 0;
     }
 
     .review {

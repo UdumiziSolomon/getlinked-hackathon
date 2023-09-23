@@ -30,6 +30,8 @@ const Register = () => {
                 },
                 body: JSON.stringify(body)
             })
+
+            console.log(res.ok)
     
             if(res.ok){
                 setIsSuccessful(true)
@@ -39,14 +41,15 @@ const Register = () => {
         }
     }
 
-    const { query: categories } = useQuery('categories', getCategories);
-    console.log(categories)
+    const { data: categories } = useQuery('categories', getCategories);
     const { mutateAsync: register } = useMutation(registerUser);
 
     const submitHandler = e => {
         e.preventDefault();
         register({team_name: teamName, phone_number: phone, email: email, project_topic: topic, catory: category, group_size: size, privacy_poclicy_accepted: checked})
     }
+
+    console.log(categories)
 
 
     return (
@@ -55,7 +58,7 @@ const Register = () => {
                 <Header />
             </div>
             <div className={styles.container}>
-                { isSuccessful && <Modal close={() => setIsSuccessful(false)} />  }
+                { isSuccessful && <Modal close={() => setIsSuccessful(false)} text='registered' />  }
                 <div className={styles.top}>
                     <div style={{display: 'flex', alignItems: 'center', marginLeft: '30px'}}>
                         <NavLink to='/'>
@@ -113,9 +116,9 @@ const Register = () => {
                             <div className={styles.inputWrapper}>
                                 <p className={styles.label}>Category</p>
                                 <select className={styles.select} onChange={e => setCategory(e.target.value)} required>
-                                    {/* {categories.map(item => (
+                                    {categories?.map(item => (
                                         <option value={item.id} key={item.id}>{item.name}</option>
-                                    ))} */}
+                                    ))}
                                 </select>
                             </div>
                             <div className={styles.inputWrapper}>

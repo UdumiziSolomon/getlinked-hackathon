@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from 'react-query';
 import styles from './contact.module.css';
-import { Header, Button } from '../../components';
+import { Header, Button, Modal } from '../../components';
 import { NavLink } from 'react-router-dom';
 
 const Contact = () => {
@@ -9,6 +9,7 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
+  const [isSuccessful, setIsSuccessful] = useState(false)
   
   const contactUs = async (body) => {
     const res = fetch('https://backend.getlinked.ai/hackathon/contact-form', {
@@ -24,11 +25,18 @@ const Contact = () => {
 
   const { mutateAsync: contact } = useMutation(contactUs)
 
+  const submitHandler = e => {
+    e.preventDefault();
+
+    contact({email, first_name: firstName, phone_number: number, message})
+  }
+
   return(
     <>
       <div className={styles.header}>
        <Header />
       </div>
+      { isSuccessful && <Modal close={() => setIsSuccessful(false)} text='contacted us' />  }
       <div className={styles.container}>
         <div className={styles.first}>
           <p className={styles.title}>Get in Touch</p> 
@@ -55,7 +63,7 @@ const Contact = () => {
             <p className={styles.subTitle}>Questions or need assistance? <span>Let us know about it</span></p>
             <p className={styles.desc}>Email us below to any question related to our event</p>
           </div>
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={submitHandler}>
             <input type="text" placeholder="First Name" className={styles.input} value={firstName} onChange={e => setFirstName(e.target.value)} required />
             <input type="text" placeholder="Email" className={styles.input} value={email} onChange={e => setEmail(e.target.email)} required />
             <input type="text" placeholder="Phone Number" className={styles.input} value={phone} onChange={e => setPhone(e.target.value)} required />
