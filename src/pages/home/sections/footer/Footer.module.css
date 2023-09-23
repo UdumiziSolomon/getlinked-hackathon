@@ -84,7 +84,7 @@ p span {
     text-align: center;
 }
 
-@media ( min-width: 399px ){
+@media ( min-width: 768px ){
     .container > div {
         display: flex;
         padding: 50px 70px;

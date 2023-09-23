@@ -74,8 +74,16 @@
     margin-bottom: 10px;
 }
 
+.error {
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-@media (min-width: 399px){
+
+@media (min-width: 768px){
     .container {
         display: flex;
         background-image: url('/public/resources/images/contactBgDesktop.png');

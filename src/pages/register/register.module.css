@@ -206,7 +206,7 @@ option:focus {
     border-radius: 4px;
 }
 
-@media (min-width: 390px) {
+@media (min-width: 768px) {
     .container {
         flex-direction: row;
         /* background-image: url("/public/resources/images/registerbg.png"); */

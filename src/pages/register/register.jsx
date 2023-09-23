@@ -44,9 +44,9 @@ const Register = () => {
     const { data: categories } = useQuery('categories', getCategories);
     const { mutateAsync: register } = useMutation(registerUser);
 
-    const submitHandler = e => {
+    const submitHandler = async (e) => {
         e.preventDefault();
-        register({team_name: teamName, phone_number: phone, email: email, project_topic: topic, catory: category, group_size: size, privacy_poclicy_accepted: checked})
+        await register({team_name: teamName, phone_number: phone, email: email, project_topic: topic, catory: category, group_size: size, privacy_poclicy_accepted: checked})
     }
 
     console.log(categories)

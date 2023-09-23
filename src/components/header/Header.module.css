@@ -72,7 +72,7 @@ a {
     text-decoration: none;
 }
 
-@media (min-width: 390px) {
+@media (min-width: 768px) {
     .container {
         height: 80px;
     }

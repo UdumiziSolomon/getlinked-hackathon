@@ -114,7 +114,7 @@
     display: none;
 }
 
-@media (min-width: 390px) {
+@media (min-width: 768px) {
     .container {
         background-image: url('/public/resources/images/heroBg.png');
         /* background-position: 10% 10%; */

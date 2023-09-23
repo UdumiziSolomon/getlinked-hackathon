@@ -34,7 +34,7 @@
 
 
 
-@media (min-width: 399px) {
+@media (min-width: 768px) {
     .container {
         padding: 50px 70px;
     }

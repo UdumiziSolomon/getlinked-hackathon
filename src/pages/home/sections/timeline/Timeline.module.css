@@ -89,7 +89,7 @@
 }
 
 
-@media (min-width: 399px){
+@media (min-width: 768px){
   .container > div {
     grid-template-areas: 
       "second first third"

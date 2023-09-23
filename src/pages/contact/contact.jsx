@@ -29,12 +29,20 @@ const Contact = () => {
     }
   }
 
-  const { mutateAsync: contact } = useMutation(contactUs)
+  const { mutateAsync: contact, isLoading  } = useMutation(contactUs)
 
-  const submitHandler = e => {
+  const submitHandler = async (e) => {
     e.preventDefault();
 
-    contact({email, first_name: firstName, phone_number: phone, message})
+    await contact({email, first_name: firstName, phone_number: phone, message})
+  }
+
+  if(isLoading){
+    return (
+      <div className={styles.error}>
+        <h1>Error occured</h1>
+      </div>
+    )
   }
 
   return(
